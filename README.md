@@ -4,7 +4,7 @@ Automated Parcellation tool for human Auditory Cortex (APAC)
 APAC is a lightweight module to parcellate human primary auditory cortex comparable to the core in non-human primates using structural MRI (myelin-sensitive index and curvature).
 
 ## Documentation
-- https://jongyoung-namgung.github.io/Apac/
+- For installation and usage instructions, please visit https://jongyoung-namgung.github.io/Apac/
 
 ## Requirements
 The current version was developed using the data obtained from HCP pipelines.
