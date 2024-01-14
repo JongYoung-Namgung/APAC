@@ -27,14 +27,14 @@ sbj.R.white.32k_fs_LR.surf.gii
 ```
 ## Required library (python>=3.6)
 ```
-nilearn
-sklearn
+numpy
 scipy
+sklearn
+sklearn.mixture
+nibabel
+nilearn
 os
 glob
-numpy
-nibabel
-sklearn.mixture
 ```
 
 ## Core developers
