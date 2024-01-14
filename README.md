@@ -37,3 +37,8 @@ nibabel
 sklearn.mixture
 ```
 
+## Core developers
+- Jong Young Namgung: CAMIN Lab, Inha University
+- Kyoungseob Byeon: MIP Lab, Sunkyunkwan University
+- Bo-yong Park: MICA Lab, Montreal Neurological Institute and Hospital
+- Sean H. Lee: Max Planck Institute for Empirical Aesthetics
