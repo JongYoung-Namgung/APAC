@@ -1,4 +1,4 @@
-# Apac
+# APAC
 Automated Parcellation tool for human Auditory Cortex (APAC)
 
 APAC is a lightweight module to parcellate human primary auditory cortex comparable to the core in non-human primates using structural MRI (myelin-sensitive index and curvature).
@@ -42,6 +42,8 @@ glob
 
 ## Core developers
 - Jong Young Namgung: CAMIN Lab, Inha University
-- Kyoungseob Byeon: MIP Lab, Sunkyunkwan University
-- Bo-yong Park: MICA Lab, Montreal Neurological Institute and Hospital
+- Kyoungseob Byeon: Center for the Developing Brain, Child Mind Institute
+- Yoonsun Yang: CAMIN Lab, Inha University
 - Sean H. Lee: Max Planck Institute for Empirical Aesthetics
+- Hyunjin Park: MIP Lab, Sunkyunkwan University
+-Bo-yong Park: CAMIN Lab, Inha University
