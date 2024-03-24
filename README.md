@@ -46,4 +46,4 @@ glob
 - Yoonsun Yang: CAMIN Lab, Inha University
 - Sean H. Lee: Max Planck Institute for Empirical Aesthetics
 - Hyunjin Park: MIP Lab, Sunkyunkwan University
--Bo-yong Park: CAMIN Lab, Inha University
+- Bo-yong Park: CAMIN Lab, Inha University
