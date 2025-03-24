@@ -41,9 +41,8 @@ glob
 ```
 
 ## Core developers
-- Jong Young Namgung: CAMIN Lab, Inha University
+- Jong Young Namgung: CAMIN Lab, Korea University
 - Kyoungseob Byeon: Center for the Developing Brain, Child Mind Institute
-- Yoonsun Yang: CAMIN Lab, Inha University
 - Sean H. Lee: Max Planck Institute for Empirical Aesthetics
 - Hyunjin Park: MIP Lab, Sunkyunkwan University
-- Bo-yong Park: CAMIN Lab, Inha University
+- Bo-yong Park: CAMIN Lab, Korea University
