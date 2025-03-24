@@ -13,20 +13,10 @@ The current version was developed using the data obtained from HCP pipelines.
 sbj.L.curvature.32k_fs_LR.shape.gii
 sbj.L.midthickness.32k_fs_LR.surf.gii
 sbj.L.SmoothedMyelinMap_BC.32k_fs_LR.func.gii
-sbj.L.sphere.32k_fs_LR.surf.gii
-sbj.L.sulc.32k_fs_LR.shape.gii
-sbj.L.thickness.32k_fs_LR.shape.gii
-sbj.L.very_inflated.32k_fs_LR.surf.gii
-sbj.L.white.32k_fs_LR.surf.gii
 
 sbj.R.curvature.32k_fs_LR.shape.gii
 sbj.R.midthickness.32k_fs_LR.surf.gii
 sbj.R.SmoothedMyelinMap_BC.32k_fs_LR.func.gii
-sbj.R.sphere.32k_fs_LR.surf.gii
-sbj.R.sulc.32k_fs_LR.shape.gii
-sbj.R.thickness.32k_fs_LR.shape.gii
-sbj.R.very_inflated.32k_fs_LR.surf.gii
-sbj.R.white.32k_fs_LR.surf.gii
 ```
 ## Required library (python>=3.6)
 ```
