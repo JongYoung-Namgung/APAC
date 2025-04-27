@@ -6,6 +6,7 @@ APAC is a lightweight module to parcellate human primary auditory cortex compara
 
 ## Requirements
 - Required files
+
 The current version was developed using the data obtained from HCP pipelines.
 ```
 *.L.sphere.*.surf.gii
@@ -39,9 +40,7 @@ atlas_path = '/directory/containing/HCPMMP_parcellation/files'
 pcore = core.core(out_path) 
 pcore.def_pcore(data_path, atlas_path, return_feature = True)
 ```
-return_feature = True provides myelin, curvature, sulcal depth, and cortical thickness on pcore and pcore_m
-```
-```
+- return_feature = True provides myelin, curvature, sulcal depth, and cortical thickness on pcore and pcore_m
 
 ## License
 - APAC is licensed under the terms of the MIT license.
