@@ -40,7 +40,7 @@ atlas_path = '/directory/containing/HCPMMP_parcellation/files'
 pcore = core.core(out_path) 
 pcore.def_pcore(data_path, atlas_path, return_feature = True)
 ```
-'return_feature = True' provides myelin, curvature, sulcal depth, and cortical thickness on pcore and pcore_m
+'return_feature = True' provides myelin, curvature, sulcal depth, and cortical thickness values on pcore and pcore_m
 
 ## License
 APAC is licensed under the terms of the MIT license.
