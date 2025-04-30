@@ -104,7 +104,7 @@ class core:
 
             
             
-            ### adjust for curvature (pCore_m-c)
+            ### adjust for curvature (pCore)
             # load curvature and take negative values (sulci)
             curv = nib.load(self.file_dict['curvature'][hemi_val]).darrays[0].data
             sulc_line = np.where(curv < 0, 1, 0)
@@ -153,7 +153,7 @@ class core:
                                 self.OutDir, 
                                 '{}.pcore.func.gii'.format(hemi)))
 
-            # return features within pcore_m and pcore region
+            # return features within pcore_m and pcore regions
             if return_feature == True:
                 pcore_m_idx = np.where(pcore_m!=0)[0]
                 pcore_idx = np.where(pcore!=0)[0]
