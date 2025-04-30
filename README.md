@@ -40,7 +40,7 @@ atlas_path = '/directory/containing/HCPMMP_parcellation/files'
 pcore = core.core(out_path) 
 pcore.def_pcore(data_path, atlas_path, return_feature = True)
 ```
-- ```return_feature = True``` provides myelin, curvature, sulcal depth, and cortical thickness values on pcore and pcore_m. In this case, ```*.sulc.*.shape.gii``` and ```*.curvature.*.shape.gii``` files must be in ```data_path```.
+- ```return_feature = True``` provides myelin, curvature, sulcal depth, and cortical thickness values on pcore and pcore_m. In this case, ```*.sulc.*.shape.gii``` and ```*.thickness.*.shape.gii``` files must be in ```data_path```.
 
 ## Core developers
 - Jong Young Namgung: CAMIN Lab, Korea University
