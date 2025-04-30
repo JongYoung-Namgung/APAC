@@ -42,9 +42,6 @@ pcore.def_pcore(data_path, atlas_path, return_feature = True)
 ```
 - ```return_feature = True``` provides myelin, curvature, sulcal depth, and cortical thickness values on pcore and pcore_m. In this case, ```*.sulc.*.shape.gii``` and ```*.curvature.*.shape.gii``` files must be in ```data_path```.
 
-## License
-APAC is licensed under the terms of the MIT license.
-
 ## Core developers
 - Jong Young Namgung: CAMIN Lab, Korea University
 - Kyoungseob Byeon: Center for the Developing Brain, Child Mind Institute
