@@ -34,13 +34,13 @@ class core:
     def def_pcore(self, DataDir, AtlasDir, return_feature = True):
 
         self.fs_path = DataDir
-        self.file_dict['sphere_surf'] = sorted(glob.glob(DataDir + '/*.?.sphere.*.surf.gii'))
-        self.file_dict['myelin'] = sorted(glob.glob(DataDir + '/*.?.SmoothedMyelinMap_BC.*.func.gii'))
-        self.file_dict['curvature'] = sorted(glob.glob(DataDir + '/*.?.curvature.*.shape.gii'))
-        self.file_dict['MMP'] = sorted(glob.glob(AtlasDir + '/HCPMMP.?.32k_fs_LR.label.gii'))
+        self.file_dict['sphere_surf'] = DataDir['Sphere']
+        self.file_dict['myelin'] = DataDir['Myelin']
+        self.file_dict['curvature'] = DataDir['Curvature']
+        self.file_dict['MMP'] = AtlasDir
         if return_feature==True:
-            self.file_dict['sulc'] = sorted(glob.glob(DataDir + '/*.?.sulc.*.shape.gii'))
-            self.file_dict['thickness'] = sorted(glob.glob(DataDir + '/*.?.thickness.*.shape.gii'))
+            self.file_dict['sulc'] = DataDir['Sulcal_depth']
+            self.file_dict['thickness'] = DataDir['Cortical_thickness']
 
 
         for hemi in ['L', 'R']:            
@@ -53,7 +53,7 @@ class core:
                 input_arr = self.initial_roi, 
                 out_file = os.path.join(
                                 self.OutDir, 
-                                '{}.initial_roi.func.gii'.format(hemi)))
+                                '{}.initial_roi.shape.gii'.format(hemi)))
             
             ### clustering
             # load myelin and take values only within the initial ROI
@@ -62,9 +62,9 @@ class core:
             myelin[initial_roi==0] = 0
             valid_myelin = myelin[initial_roi == 1]
             
-            # GMM with k=3
-            n_comp = 3
-            gmm = GaussianMixture(n_components=n_comp)
+            # GMM with k=2
+            n_comp = 2
+            gmm = GaussianMixture(n_components=n_comp, random_state=0)
             gmm.fit(valid_myelin.reshape(-1, 1))
             gmm_label = gmm.predict(valid_myelin.reshape(-1,1))
             
@@ -80,7 +80,7 @@ class core:
 			        input_arr = pcore_m, 
 			        out_file = os.path.join(
 							        self.OutDir, 
-							        '{}.pcore_m.func.gii'.format(hemi)))
+							        '{}.pcore_m.shape.gii'.format(hemi)))
 
 
             sp_clust = util.sphere_clustering(self.file_dict['sphere_surf'][hemi_val], pcore_m)
@@ -92,7 +92,7 @@ class core:
                     input_arr = clustK,
                     out_file = os.path.join(
                                     self.OutDir, 
-                                    '{}.clustK'.format(hemi) + '{}.func.gii'.format(n_comp)))
+                                    '{}.clustK'.format(hemi) + '{}.shape.gii'.format(n_comp)))
             
             # make a clear cluster (remove small redundant noise clusters)
             # by only taking the largest region
@@ -104,7 +104,7 @@ class core:
 
             
             
-            ### adjust for curvature (pCore)
+            ### adjust for curvature (pCore_m-c)
             # load curvature and take negative values (sulci)
             curv = nib.load(self.file_dict['curvature'][hemi_val]).darrays[0].data
             sulc_line = np.where(curv < 0, 1, 0)
@@ -128,7 +128,7 @@ class core:
                 input_arr = border, 
                 out_file = os.path.join(
                                 self.OutDir, 
-                                '{}.curv_border.func.gii'.format(hemi)))
+                                '{}.curv_border.shape.gii'.format(hemi)))
             
             # expand the remained region until it touch the border
             # if there are >=2 remained regions, expand until they touch each other
@@ -151,17 +151,17 @@ class core:
                 input_arr = self.pcore, 
                 out_file = os.path.join(
                                 self.OutDir, 
-                                '{}.pcore.func.gii'.format(hemi)))
+                                '{}.pcore.shape.gii'.format(hemi)))
 
-            # return features within pcore_m and pcore regions
+            # return features within pcore_m and pcore region
             if return_feature == True:
                 pcore_m_idx = np.where(pcore_m!=0)[0]
                 pcore_idx = np.where(pcore!=0)[0]
                 sulc = nib.load(self.file_dict['sulc'][hemi_val]).darrays[0].data
                 thickness = nib.load(self.file_dict['thickness'][hemi_val]).darrays[0].data
 
-                np.save(os.path.join(self.OutDir,'curv_pcore_m.npy'), np.mean(curv[pcore_m_idx]))
-                np.save(os.path.join(self.OutDir,'curv_pcore.npy'), np.mean(curv[pcore_idx]))
+                np.save(os.path.join(self.OutDir,'curvature_pcore_m.npy'), np.mean(curv[pcore_m_idx]))
+                np.save(os.path.join(self.OutDir,'curvature_pcore.npy'), np.mean(curv[pcore_idx]))
                 
                 np.save(os.path.join(self.OutDir,'myelin_pcore_m.npy'), np.mean(myelin[pcore_m_idx]))
                 np.save(os.path.join(self.OutDir,'myelin_pcore.npy'), np.mean(myelin[pcore_idx]))
