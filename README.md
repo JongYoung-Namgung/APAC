@@ -301,7 +301,7 @@ It is a binary surface mask representing the putative core-like auditory region 
 
 ## Citation
 
-If you use APAC in your research, please cite the associated manuscript:
+If you use APAC in your research, please cite the below manuscript:
 
 Namgung et al. Automated individual-level parcellation of a putative core-like region in human primary auditory cortex.
 
