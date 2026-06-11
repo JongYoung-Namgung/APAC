@@ -13,26 +13,6 @@ This tool was developed for surface-based data in the **32k fsLR space**, follow
 
 ---
 
-## Conceptual overview
-
-The human auditory cortex shows substantial interindividual anatomical variability, especially in the shape and duplication pattern of Heschl’s gyrus. Group-level auditory atlases are useful, but they may not fully capture individual differences in Heschl’s gyrus morphology.
-
-APAC addresses this issue by defining the pCore separately for each participant and hemisphere.
-
-The pipeline proceeds as follows:
-
-1. Define an initial broad auditory ROI using HCP multimodal parcellation labels.
-2. Extract myelin-related contrast values within this initial ROI.
-3. Apply a two-component Gaussian mixture model to separate highly myelinated and less myelinated vertices.
-4. Define the highly myelinated cluster as **pCore_m**.
-5. Identify sulcal boundaries using cortical curvature.
-6. Refine pCore_m using curvature-based anatomical constraints.
-7. Save the final curvature-constrained pCore mask.
-
-The final pCore should be interpreted as an **operational definition of a putative core-like auditory region**, not as a definitive cytoarchitectonic ground truth of primary auditory cortex.
-
----
-
 ## Main outputs
 
 APAC produces two main parcellations:
