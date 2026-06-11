@@ -111,8 +111,6 @@ atlas/HCPMMP.L.32k_fs_LR.label.gii
 atlas/HCPMMP.R.32k_fs_LR.label.gii
 ```
 
-The initial ROI includes early auditory and adjacent auditory-related regions from the HCP multimodal parcellation, including A1, area 52, RI, PFcm, PBelt, MBelt, and LBelt.
-
 ### Optional files
 
 If `return_feature=True`, the following files are also required:
@@ -305,9 +303,7 @@ It is a binary surface mask representing the putative core-like auditory region 
 
 If you use APAC in your research, please cite the associated manuscript:
 
-```text
 Namgung et al. Automated individual-level parcellation of a putative core-like region in human primary auditory cortex.
-```
 
 ## Core developers
 
