@@ -160,14 +160,13 @@ The exact filenames do not need to match this example if the correct file paths 
 ## Basic usage
 
 ```python
-from pathlib import Path
 from apac.core import pCoreSegmenter
 
 subject = "sub-001"
 
-data_root = Path("/path/to/data") / subject
-atlas_root = Path("/path/to/APAC/atlas")
-out_root = Path("/path/to/outputs") / subject
+data_root = f"/path/to/data/{subject}"
+atlas_root = f"/path/to/APAC/atlas"
+out_root = f"/path/to/outputs/{subject}"
 
 data_dir = {
     "Sphere": {
