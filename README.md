@@ -302,7 +302,7 @@ It is a binary surface mask representing the putative core-like auditory region 
 
 If you use APAC in your research, please cite the below manuscript:
 
-Namgung et al. Automated individual-level parcellation of a putative core auditory region in human Heschl’s gyrus.
+Namgung et al. "Automated individual-level parcellation of a putative core auditory region in human Heschl’s gyrus".
 
 ## Core developers
 
