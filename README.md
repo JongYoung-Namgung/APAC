@@ -307,7 +307,7 @@ Namgung et al. "Automated individual-level parcellation of a putative core audit
 ## Core developers
 
 * Jong Young Namgung: CAMIN Lab, Korea University
-* Kyoungseob Byeon: Center for the Developing Brain, Child Mind Institute
+* Kyoungseob Byeon: Child Mind Institute
 * Sean H. Lee: Max Planck Institute for Empirical Aesthetics
 * Hyunjin Park: MIP Lab, Sungkyunkwan University
 * Bo-yong Park: CAMIN Lab, Korea University
