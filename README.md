@@ -2,12 +2,12 @@
 
 **APAC** stands for **Automated Parcellation of the human Auditory Cortex**.
 
-APAC is a lightweight Python-based pipeline for individual-level parcellation of a putative core-like region in the human auditory cortex. The pipeline combines two structural MRI-derived features:
+APAC is a lightweight Python-based pipeline for individual-level parcellation of a putative core region in the human auditory cortex. The pipeline combines two structural MRI-derived features:
 
 1. **Myelin-related contrast**, typically estimated from T1w/T2w images.
 2. **Cortical curvature**, used to constrain the parcellation according to the gyral and sulcal anatomy of Heschl’s gyrus.
 
-The main output is an individual-specific binary mask of the **putative core-like auditory region**, referred to as **pCore**. APAC also outputs **pCore_m**, a myelin-only candidate region before curvature-based anatomical refinement.
+The main output is an individual-specific binary mask of the **putative core auditory region**, referred to as **pCore**. APAC also outputs **pCore_m**, a myelin-only candidate region before curvature-based anatomical refinement.
 
 This tool was developed for surface-based data in the **32k fsLR space**, following Human Connectome Project (HCP)-style structural preprocessing.
 
@@ -295,7 +295,7 @@ It is used to constrain the final pCore according to local gyral anatomy.
 
 This is the final APAC-derived pCore mask.
 
-It is a binary surface mask representing the putative core-like auditory region after combining myelin-related contrast with curvature-based anatomical constraints.
+It is a binary surface mask representing the putative core auditory region after combining myelin-related contrast with curvature-based anatomical constraints.
 
 
 ## Citation
